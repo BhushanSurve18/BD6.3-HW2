@@ -51,7 +51,7 @@ app.get('/employees/details/:id', async (req, res) => {
 });
 
 app.post('/employees/new', async (req, res) => {
-  const newEmployee = await addEmployee(res.body);
+  const newEmployee = await addEmployee(req.body);
   res.status(201).json(newEmployee);
 });
 
